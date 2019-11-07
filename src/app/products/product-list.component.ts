@@ -6,10 +6,13 @@ import { Component } from '@angular/core';
 })
 export class ProductListComponent {
   pageTitle = 'Product List';
+  imageWidth: number = 50;
+  imageMargin: number = 2;
+  showImage: boolean = false;
   products: any[] = [
     {
       "productId": 2,
-      "productName": "Grden Cart",
+      "productName": "Garden Cart",
       "productCode": "GDN-0023",
       "releaseDate": "March 18, 2019",
       "description": "15 gallon capacity rolling...",
@@ -28,4 +31,8 @@ export class ProductListComponent {
       "imageUrl": "assets/images/hammer.png"
     }
   ];
+
+  toggleImage(): void {
+    this.showImage = !this.showImage;
+  }
 }
